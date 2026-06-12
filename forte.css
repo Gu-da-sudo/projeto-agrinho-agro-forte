@@ -1,0 +1,120 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Container de Ícones */
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.icon-card {
+    background-color: white;
+    padding: 20px;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    border: 2px solid transparent;
+}
+
+.icon-card i {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-card span {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Efeitos de Hover e Ativo nos Ícones */
+.icon-card:hover {
+    transform: translateY(-5px);
+    background-color: #e8f5e9;
+}
+
+.icon-card.active {
+    background-color: #2e7d32;
+    color: white;
+    border-color: #1b5e20;
+}
+
+.icon-card.active i {
+    color: white;
+}
+
+/* Container de Informações */
+.info-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-height: 250px;
+}
+
+/* Esconde os textos por padrão */
+.info-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Mostra apenas o texto ativo */
+.info-content.active {
+    display: block;
+}
+
+.info-content h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #81c784;
+    padding-bottom: 10px;
+}
+
+.info-content h2 i {
+    margin-right: 10px;
+}
+
+/* Configuração exata dos parágrafos solicitados */
+.info-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Animação suave de transição */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
